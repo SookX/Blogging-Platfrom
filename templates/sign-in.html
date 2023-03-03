@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block style %}
+<style>
+    .container {
+        padding-top: 100px;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<br><br><br>
+<div class="container">
+    <form class="mx-auto" action="/sign-in" method="post">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" name="email" placeholder="Enter email">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <br>
+  <div class="container">
+    <div class="text mt-3">
+        <h3>If you don't have an account, register now</h3>
+      </div>
+    <a href="{{url_for('register')}}"><button type="button" class="btn btn-secondary mt-3">Register</button></a>
+  </div>
+
+  
+
+{% endblock %}
