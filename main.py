@@ -30,7 +30,7 @@ def home():
     messages = Message.query.all()
     users = Account.query.all()
     messages.reverse()
-    return render_template('index.html', messages=messages,users= users)
+    return render_template('index.html', messages=messages, users=users)
 
 @app.route('/sign-in', methods=['POST', 'GET'])
 def sign_in():
